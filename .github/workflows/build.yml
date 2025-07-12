@@ -35,3 +35,17 @@ jobs:
           docker tag hotstar rahul70/hotstar:latest
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push rahul70/hotstar:latest
+  deploy:
+    needs: build-analyze-scan
+    runs-on: [self-hosted]
+    steps:
+      - name: docker pull
+        run: docker pull rahul70/hotstar:latest
+      - name: deploy to container
+        run: docker run -d -p 3000:3000 rahul70/hotstar:latest
+      - name: update kubeconfig
+        run: aws eks --region us-east-1 update-kubeconfig --name EKS_CLOUD 
+      - name: deploy to kubernetes
+        run: kubectl apply -f K8S/deployment.yml
+      - name: deploy service
+        run: kubectl apply -f K8S/service.yml 
