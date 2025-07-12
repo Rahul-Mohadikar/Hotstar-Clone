@@ -20,4 +20,16 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+      - name: NPM install
+        run: npm install
+      - name: docker login
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: docker build and push
+        run: |
+            docker build -t hotstar
+            docker tag hotstar rahul70/hotstar:latest
+            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+            docker push rahul70/hotstar:latest
+          env:
+            DOCKER_CLI_ACI: 1
           
