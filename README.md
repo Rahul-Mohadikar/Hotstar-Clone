@@ -43,7 +43,7 @@ o	Docker image build and push to a registry (e.g., Docker Hub)
 
 o	Kubernetes deployment update using kubectl
 
-4.	Application is deployed to AWS EKS cluster using updated image.
+3.	Application is deployed to AWS EKS cluster using updated image.
 ________________________________________
 🔐 Secure Secrets Management
 All sensitive credentials and access tokens are stored securely in GitHub Actions Secrets:
@@ -126,8 +126,12 @@ By the end of this setup, you’ll have:
 ________________________________________
 📌 Benefits of This Architecture
 ✅ 100% Automated Code → Deploy Flow
+
 ✅ Scalable & Secure Production Setup
+
 ✅ Fast Feedback with SonarQube Reports
+
 ✅ Reusable Infrastructure Modules (Terraform)
+
 ✅ Zero-downtime Deployments via Kubernetes
 
