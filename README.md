@@ -7,9 +7,13 @@ In today’s fast-paced DevOps world, automating your deployments is essential. 
 •	GitHub Actions – For CI/CD pipeline automation
 
 •	Docker – For containerizing the app
+
 •	SonarQube – For static code analysis and code quality checks
+
 •	Terraform – For provisioning cloud infrastructure
+
 •	Kubernetes (kubectl) – For deploying containers in production
+
 •	AWS (EC2 + EKS) – As the cloud infrastructure (can be adapted to other clouds)
 ________________________________________
 🗂️ Project Structure
