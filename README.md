@@ -5,6 +5,7 @@ In today’s fast-paced DevOps world, automating your deployments is essential. 
 
 🧰 Tech Stack Used
 •	GitHub Actions – For CI/CD pipeline automation
+
 •	Docker – For containerizing the app
 •	SonarQube – For static code analysis and code quality checks
 •	Terraform – For provisioning cloud infrastructure
