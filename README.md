@@ -1,5 +1,8 @@
 🚀 Deploying a Hotstar Clone Using GitHub Actions CI/CD with Docker, Terraform, Kubernetes & SonarQube
+
+
 In today’s fast-paced DevOps world, automating your deployments is essential. This blog will walk you through how to deploy a Hotstar clone using GitHub Actions for CI/CD, Docker for containerization, Terraform for infrastructure provisioning, Kubernetes for orchestration, and SonarQube for code quality analysis.
+
 🧰 Tech Stack Used
 •	GitHub Actions – For CI/CD pipeline automation
 •	Docker – For containerizing the app
