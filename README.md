@@ -4,6 +4,7 @@
 In today’s fast-paced DevOps world, automating your deployments is essential. This blog will walk you through how to deploy a Hotstar clone using GitHub Actions for CI/CD, Docker for containerization, Terraform for infrastructure provisioning, Kubernetes for orchestration, and SonarQube for code quality analysis.
 
 🧰 Tech Stack Used
+
 •	GitHub Actions – For CI/CD pipeline automation
 
 •	Docker – For containerizing the app
@@ -18,6 +19,7 @@ In today’s fast-paced DevOps world, automating your deployments is essential. 
 ________________________________________
 🗂️ Project Structure
 The Hotstar clone project is organized into:
+
 •	A React-based frontend
 
 •	A Node.js backend
@@ -83,6 +85,7 @@ These images are pushed to Docker Hub (or any container registry) as part of the
 ________________________________________
 ☸️ Kubernetes Deployment
 The Kubernetes manifests include:
+
 •	Deployment objects to manage pods and replica sets
 
 •	Service objects to expose the app internally or externally
