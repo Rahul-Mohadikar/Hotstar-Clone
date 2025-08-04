@@ -125,6 +125,7 @@ By the end of this setup, you’ll have:
 •	App deployed to a Kubernetes cluster on AWS
 ________________________________________
 📌 Benefits of This Architecture
+
 ✅ 100% Automated Code → Deploy Flow
 
 ✅ Scalable & Secure Production Setup
