@@ -1,9 +1,9 @@
-🚀 Deploying a Hotstar Clone Using GitHub Actions CI/CD with Docker, Terraform, Kubernetes & SonarQube
+# 🚀 Deploying a Hotstar Clone Using GitHub Actions CI/CD with Docker, Terraform, Kubernetes & SonarQube
 
 
 In today’s fast-paced DevOps world, automating your deployments is essential. This blog will walk you through how to deploy a Hotstar clone using GitHub Actions for CI/CD, Docker for containerization, Terraform for infrastructure provisioning, Kubernetes for orchestration, and SonarQube for code quality analysis.
 
-🧰 Tech Stack Used
+# 🧰 Tech Stack Used 
 
 •	GitHub Actions – For CI/CD pipeline automation
 
@@ -17,7 +17,7 @@ In today’s fast-paced DevOps world, automating your deployments is essential. 
 
 •	AWS (EC2 + EKS) – As the cloud infrastructure (can be adapted to other clouds)
 ________________________________________
-🗂️ Project Structure
+# 🗂️ Project Structure
 The Hotstar clone project is organized into:
 
 •	A React-based frontend
@@ -34,7 +34,7 @@ The Hotstar clone project is organized into:
 
 •	A SonarQube configuration for static code analysis
 ________________________________________
-⚙️ DevOps Workflow Overview
+# ⚙️ DevOps Workflow Overview
 1.	Developer pushes code to the main branch on GitHub.
 2.	GitHub Actions pipeline automatically triggers:
 o	Code checkout and environment setup
@@ -47,7 +47,7 @@ o	Kubernetes deployment update using kubectl
 
 3.	Application is deployed to AWS EKS cluster using updated image.
 ________________________________________
-🔐 Secure Secrets Management
+# 🔐 Secure Secrets Management
 All sensitive credentials and access tokens are stored securely in GitHub Actions Secrets:
 
 •	AWS credentials (for Terraform & EKS)
@@ -59,7 +59,7 @@ All sensitive credentials and access tokens are stored securely in GitHub Action
 •	Kubernetes config 
 This ensures that no sensitive data is hardcoded in the pipeline.
 ________________________________________
-🧠 Infrastructure Automation with Terraform
+# 🧠 Infrastructure Automation with Terraform
 Terraform is used to automate the provisioning of:
 
 •	VPC, Subnets, and IAM roles
@@ -72,7 +72,7 @@ Terraform is used to automate the provisioning of:
 
 This guarantees a repeatable and consistent infrastructure setup across environments (dev, staging, prod).
 ________________________________________
-📦 Containerization with Docker
+# 📦 Containerization with Docker
 Both frontend and backend are containerized into separate Docker images or a single image depending on the architecture. This provides:
 
 •	Portability between environments
@@ -83,7 +83,7 @@ Both frontend and backend are containerized into separate Docker images or a sin
 
 These images are pushed to Docker Hub (or any container registry) as part of the pipeline.
 ________________________________________
-☸️ Kubernetes Deployment
+# ☸️ Kubernetes Deployment
 The Kubernetes manifests include:
 
 •	Deployment objects to manage pods and replica sets
@@ -94,7 +94,7 @@ The Kubernetes manifests include:
 
 The GitHub Actions workflow uses kubectl to apply changes directly to the EKS cluster after the image is pushed.
 ________________________________________
-🧪 Code Quality with SonarQube
+# 🧪 Code Quality with SonarQube
 SonarQube is integrated into the CI process to ensure:
 
 •	Static code analysis for bugs, code smells, security hotspots
@@ -105,7 +105,7 @@ SonarQube is integrated into the CI process to ensure:
 
 This is essential for DevSecOps and maintaining clean, secure code over time.
 ________________________________________
-📈 Monitoring & Observability (Optional Add-ons)
+# 📈 Monitoring & Observability (Optional Add-ons)
 For production-grade deployments, you can extend this pipeline with:
 
 •	Prometheus & Grafana for metrics and performance dashboards
@@ -114,7 +114,7 @@ For production-grade deployments, you can extend this pipeline with:
 
 •	ACM + NGINX Ingress for HTTPS support
 ________________________________________
-🎯 Final Outcome
+# 🎯 Final Outcome
 By the end of this setup, you’ll have:
 
 •	A production-ready CI/CD pipeline
@@ -127,7 +127,7 @@ By the end of this setup, you’ll have:
 
 •	App deployed to a Kubernetes cluster on AWS
 ________________________________________
-📌 Benefits of This Architecture
+# 📌 Benefits of This Architecture
 
 ✅ 100% Automated Code → Deploy Flow
 
