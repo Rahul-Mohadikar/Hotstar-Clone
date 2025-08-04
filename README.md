@@ -36,13 +36,18 @@ ________________________________________
 1.	Developer pushes code to the main branch on GitHub.
 2.	GitHub Actions pipeline automatically triggers:
 o	Code checkout and environment setup
+
 o	SonarQube scan for bugs, code smells, vulnerabilities
+
 o	Docker image build and push to a registry (e.g., Docker Hub)
+
 o	Kubernetes deployment update using kubectl
-3.	Application is deployed to AWS EKS cluster using updated image.
+
+4.	Application is deployed to AWS EKS cluster using updated image.
 ________________________________________
 🔐 Secure Secrets Management
 All sensitive credentials and access tokens are stored securely in GitHub Actions Secrets:
+
 •	AWS credentials (for Terraform & EKS)
 
 •	Docker Hub credentials
@@ -54,14 +59,20 @@ This ensures that no sensitive data is hardcoded in the pipeline.
 ________________________________________
 🧠 Infrastructure Automation with Terraform
 Terraform is used to automate the provisioning of:
+
 •	VPC, Subnets, and IAM roles
+
 •	Amazon EKS cluster
+
 •	Worker nodes (auto-scaling)
+
 •	Security groups and IAM policies
+
 This guarantees a repeatable and consistent infrastructure setup across environments (dev, staging, prod).
 ________________________________________
 📦 Containerization with Docker
 Both frontend and backend are containerized into separate Docker images or a single image depending on the architecture. This provides:
+
 •	Portability between environments
 
 •	Easy rollbacks with versioned images
@@ -82,6 +93,7 @@ The GitHub Actions workflow uses kubectl to apply changes directly to the EKS cl
 ________________________________________
 🧪 Code Quality with SonarQube
 SonarQube is integrated into the CI process to ensure:
+
 •	Static code analysis for bugs, code smells, security hotspots
 
 •	Enforced code quality gates before deployment
@@ -92,6 +104,7 @@ This is essential for DevSecOps and maintaining clean, secure code over time.
 ________________________________________
 📈 Monitoring & Observability (Optional Add-ons)
 For production-grade deployments, you can extend this pipeline with:
+
 •	Prometheus & Grafana for metrics and performance dashboards
 
 •	ELK or Loki stack for centralized logging
@@ -100,6 +113,7 @@ For production-grade deployments, you can extend this pipeline with:
 ________________________________________
 🎯 Final Outcome
 By the end of this setup, you’ll have:
+
 •	A production-ready CI/CD pipeline
 
 •	Fully containerized application
